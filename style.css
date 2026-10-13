@@ -172,6 +172,13 @@
             transform: translateY(1px);
         }
 
+        .theme-btn {
+            font-family: 'Space Grotesk', sans-serif !important; /* Locks font metrics so buttons don't resize */
+            white-space: nowrap !important; /* Prevents text wrapping mid-button */
+            box-sizing: border-box !important;
+            flex-shrink: 0;
+        }
+
         /* Custom Theme Overlays and Special Decorators */
         /* Scanlines for Cyberpunk */
         .cyberpunk-scanlines {

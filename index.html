@@ -56,12 +56,17 @@
                 </button>
             </div>
 
-            <!-- Audio Synth Toggle Button -->
-            <button id="sound-toggle" onclick="toggleAudio()" class="px-3 py-1.5 text-xs font-bold rounded-lg border border-current opacity-80 hover:opacity-100 transition-opacity flex items-center gap-2">
-                <i class="fa-solid fa-volume-xmark" id="sound-icon"></i> <span id="sound-text">SFX OFF</span>
-            </button>
+           
+           
         </div>
     </header>
+     <!-- Audio Synth Toggle Button -->
+    <div class="fixed bottom-6 left-6 z-50">
+        <button id="sound-toggle" onclick="toggleAudio()" class="theme-card px-4 py-2.5 text-xs font-bold shadow-xl transition-all flex items-center gap-2 hover:scale-105">
+            <i class="fa-solid fa-volume-xmark text-sm" id="sound-icon"></i> <span id="sound-text">SFX OFF</span>
+        </button>
+    </div>
+
 
     <main class="max-w-6xl mx-auto px-4 space-y-10 relative z-10">
 
@@ -242,6 +247,6 @@
         <i class="fa-solid fa-circle-check text-emerald-400 text-base"></i>
         <span id="toast-msg">Theme Changed!</span>
     </div>
-
+    <script src="script.js"></script>
 </body>
 </html>
