@@ -23,7 +23,8 @@
 
     <!-- Floating Theme Switcher Header -->
     <header class="sticky top-4 z-50 max-w-6xl mx-auto px-4 mb-8">
-        <div class="theme-card aero-gloss p-3 md:p-4 flex flex-wrap items-center justify-between gap-4">
+    <div class="theme-card aero-gloss p-3 md:p-4 flex flex-col lg:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3 w-full lg:w-auto justify-between lg:justify-start">
             <div class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-pink-500 to-cyan-400 flex items-center justify-center text-white font-bold text-xl shadow-md" id="app-logo">
                     <i class="fa-solid font-heading fa-wand-magic-sparkles"></i>
@@ -33,32 +34,30 @@
                     <p class="text-xs opacity-80" id="app-subtitle">Real-Time Design System Switcher</p>
                 </div>
             </div>
-
-            <!-- Theme Picker Buttons -->
-            <div class="flex flex-wrap items-center gap-2" id="theme-selector">
-                <button onclick="setTheme('frutiger-aero')" class="theme-btn px-3 py-1.5 text-xs md:text-sm font-semibold rounded-full bg-sky-200 text-sky-900 hover:bg-sky-300 transition-all flex items-center gap-1.5" data-t="frutiger-aero">
-                    <i class="fa-solid fa-droplet text-blue-500"></i> Frutiger Aero
-                </button>
-                <button onclick="setTheme('bungee-y2k')" class="theme-btn px-3 py-1.5 text-xs md:text-sm font-semibold rounded-full bg-pink-200 text-pink-900 hover:bg-pink-300 transition-all flex items-center gap-1.5" data-t="bungee-y2k">
-                    <i class="fa-solid fa-compact-disc text-pink-600"></i> Bungee Y2K
-                </button>
-                <button onclick="setTheme('rococo')" class="theme-btn px-3 py-1.5 text-xs md:text-sm font-semibold rounded-full bg-amber-900 text-amber-100 hover:bg-amber-800 transition-all flex items-center gap-1.5" data-t="rococo">
-                    <i class="fa-solid fa-crown text-amber-400"></i> Rococo
-                </button>
-                <button onclick="setTheme('neobrutalism')" class="theme-btn px-3 py-1.5 text-xs md:text-sm font-semibold rounded-full bg-lime-300 text-black hover:bg-lime-400 transition-all flex items-center gap-1.5" data-t="neobrutalism">
-                    <i class="fa-solid fa-shapes text-black"></i> Neobrutalism
-                </button>
-                <button onclick="setTheme('cyberpunk')" class="theme-btn px-3 py-1.5 text-xs md:text-sm font-semibold rounded-full bg-slate-900 text-cyan-400 border border-cyan-500 hover:bg-slate-800 transition-all flex items-center gap-1.5" data-t="cyberpunk">
-                    <i class="fa-solid fa-microchip text-cyan-400"></i> Cyberpunk
-                </button>
-                <button onclick="setTheme('newspaper')" class="theme-btn px-3 py-1.5 text-xs md:text-sm font-semibold rounded-full bg-stone-300 text-stone-900 hover:bg-stone-400 transition-all flex items-center gap-1.5" data-t="newspaper">
-                    <i class="fa-solid fa-newspaper text-stone-800"></i> Newspaper
-                </button>
-            </div>
-
-           
-           
         </div>
+
+        <!-- Theme Picker Buttons - Forced Single Row with Horizontal Scroll -->
+        <div class="flex flex-nowrap items-center gap-2 overflow-x-auto w-full lg:w-auto py-1 no-scrollbar" id="theme-selector" style="white-space: nowrap; -webkit-overflow-scrolling: touch;">
+            <button onclick="setTheme('frutiger-aero')" class="theme-btn flex-shrink-0 px-3 py-1.5 text-xs md:text-sm font-semibold rounded-full bg-sky-200 text-sky-900 hover:bg-sky-300 transition-all flex items-center gap-1.5" data-t="frutiger-aero">
+                <i class="fa-solid fa-droplet text-blue-500"></i> Frutiger Aero
+            </button>
+            <button onclick="setTheme('bungee-y2k')" class="theme-btn flex-shrink-0 px-3 py-1.5 text-xs md:text-sm font-semibold rounded-full bg-pink-200 text-pink-900 hover:bg-pink-300 transition-all flex items-center gap-1.5" data-t="bungee-y2k">
+                <i class="fa-solid fa-compact-disc text-pink-600"></i> Bungee Y2K
+            </button>
+            <button onclick="setTheme('rococo')" class="theme-btn flex-shrink-0 px-3 py-1.5 text-xs md:text-sm font-semibold rounded-full bg-amber-900 text-amber-100 hover:bg-amber-800 transition-all flex items-center gap-1.5" data-t="rococo">
+                <i class="fa-solid fa-crown text-amber-400"></i> Rococo
+            </button>
+            <button onclick="setTheme('neobrutalism')" class="theme-btn flex-shrink-0 px-3 py-1.5 text-xs md:text-sm font-semibold rounded-full bg-lime-300 text-black hover:bg-lime-400 transition-all flex items-center gap-1.5" data-t="neobrutalism">
+                <i class="fa-solid fa-shapes text-black"></i> Neobrutalism
+            </button>
+            <button onclick="setTheme('cyberpunk')" class="theme-btn flex-shrink-0 px-3 py-1.5 text-xs md:text-sm font-semibold rounded-full bg-slate-900 text-cyan-400 border border-cyan-500 hover:bg-slate-800 transition-all flex items-center gap-1.5" data-t="cyberpunk">
+                <i class="fa-solid fa-microchip text-cyan-400"></i> Cyberpunk
+            </button>
+            <button onclick="setTheme('newspaper')" class="theme-btn flex-shrink-0 px-3 py-1.5 text-xs md:text-sm font-semibold rounded-full bg-stone-300 text-stone-900 hover:bg-stone-400 transition-all flex items-center gap-1.5" data-t="newspaper">
+                <i class="fa-solid fa-newspaper text-stone-800"></i> Newspaper
+            </button>
+        </div>
+    </div>
     </header>
      <!-- Audio Synth Toggle Button -->
     <div class="fixed bottom-6 left-6 z-50">
