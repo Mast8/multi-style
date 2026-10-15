@@ -180,14 +180,14 @@
         }
 
         /* Hide scrollbar for Chrome, Safari and Opera */
-.no-scrollbar::-webkit-scrollbar {
-    display: none;
-}
-/* Hide scrollbar for IE, Edge and Firefox */
-.no-scrollbar {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-}
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
 
         /* Custom Theme Overlays and Special Decorators */
         /* Scanlines for Cyberpunk */
@@ -259,4 +259,16 @@
             opacity: 0.05;
             pointer-events: none;
             z-index: 2;
+        }
+
+        [data-theme="newspaper"] h1,
+        [data-theme="newspaper"] h2,
+        [data-theme="newspaper"] h3,
+        [data-theme="newspaper"] h4,
+        [data-theme="newspaper"] .font-heading {
+            font-size: 0.85em;         /* Scales down the main name/headings slightly relative to other themes */
+            letter-spacing: -0.02em;   /* Tightens the spacing between letters */
+            line-height: 1.15;         /* Gives vertical breathing room for tall Gothic ascenders */
+            padding-top: 0.05em;       /* Prevents top clipping of capital letters */
+            padding-bottom: 0.05em;    /* Prevents bottom clipping of descenders */
         }
