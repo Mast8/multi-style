@@ -317,3 +317,21 @@
             animateCanvas();
             updateCSSInspector();
         };
+
+        document.addEventListener('keydown', (e) => {
+        // Ignore keypresses if user is typing in an input field
+        if (['INPUT', 'SELECT', 'TEXTAREA'].includes(document.activeElement.tagName)) return;
+
+        const themeMap = {
+            '1': 'frutiger-aero',
+            '2': 'bungee-y2k',
+            '3': 'rococo',
+            '4': 'neobrutalism',
+            '5': 'cyberpunk',
+            '6': 'newspaper'
+        };
+
+        if (themeMap[e.key]) {
+            setTheme(themeMap[e.key]);
+        }
+    });

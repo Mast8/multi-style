@@ -266,9 +266,9 @@
         [data-theme="newspaper"] h3,
         [data-theme="newspaper"] h4,
         [data-theme="newspaper"] .font-heading {
-            font-size: 0.85em;         /* Scales down the main name/headings slightly relative to other themes */
-            letter-spacing: -0.02em;   /* Tightens the spacing between letters */
-            line-height: 1.15;         /* Gives vertical breathing room for tall Gothic ascenders */
-            padding-top: 0.05em;       /* Prevents top clipping of capital letters */
-            padding-bottom: 0.05em;    /* Prevents bottom clipping of descenders */
+            font-size: 0.85em;         
+            letter-spacing: -0.02em;   
+            line-height: 1.15;         
+            padding-top: 0.05em;       
+            padding-bottom: 0.05em;    
         }
