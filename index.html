@@ -73,6 +73,12 @@
         </button>
     </div>
 
+    <!-- Keyboard Shortcuts Modal Trigger Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <button onclick="openKeyboardModal()" class="theme-card px-4 py-2.5 text-xs font-bold shadow-xl transition-all flex items-center gap-2 hover:scale-105" style="background: var(--accent-1); color: #fff;">
+            <i class="fa-solid fa-keyboard text-sm"></i> Shortcuts (1-6)
+        </button>
+    </div>
 
     <main class="max-w-6xl mx-auto px-4 space-y-10 relative z-10">
 
@@ -248,11 +254,56 @@
         </div>
     </div>
 
+    <!-- KEYBOARD SHORTCUTS MODAL -->
+    <div id="keyboard-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="kb-modal-title" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="theme-card max-w-md w-full p-6 md:p-8 relative transform scale-95 transition-transform duration-300" id="keyboard-modal-box">
+            <button onclick="closeKeyboardModal()" class="absolute top-4 right-4 w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm border border-current opacity-70 hover:opacity-100">
+                ✕
+            </button>
+            <h3 class="text-xl font-black mb-4 flex items-center gap-2" id="kb-modal-title">
+                <i class="fa-solid fa-keyboard"></i> Quick Keyboard Shortcuts
+            </h3>
+            <div class="space-y-3 text-xs md:text-sm font-mono mb-6">
+                <div class="flex justify-between items-center p-2 rounded" style="background: var(--bg-secondary); border: var(--border-style);">
+                    <span>Switch to Frutiger Aero</span>
+                    <kbd class="px-2 py-1 rounded font-bold shadow" style="background: var(--accent-1); color: #fff;">1</kbd>
+                </div>
+                <div class="flex justify-between items-center p-2 rounded" style="background: var(--bg-secondary); border: var(--border-style);">
+                    <span>Switch to Bungee Y2K</span>
+                    <kbd class="px-2 py-1 rounded font-bold shadow" style="background: var(--accent-1); color: #fff;">2</kbd>
+                </div>
+                <div class="flex justify-between items-center p-2 rounded" style="background: var(--bg-secondary); border: var(--border-style);">
+                    <span>Switch to Rococo</span>
+                    <kbd class="px-2 py-1 rounded font-bold shadow" style="background: var(--accent-1); color: #fff;">3</kbd>
+                </div>
+                <div class="flex justify-between items-center p-2 rounded" style="background: var(--bg-secondary); border: var(--border-style);">
+                    <span>Switch to Neobrutalism</span>
+                    <kbd class="px-2 py-1 rounded font-bold shadow" style="background: var(--accent-1); color: #fff;">4</kbd>
+                </div>
+                <div class="flex justify-between items-center p-2 rounded" style="background: var(--bg-secondary); border: var(--border-style);">
+                    <span>Switch to Cyberpunk</span>
+                    <kbd class="px-2 py-1 rounded font-bold shadow" style="background: var(--accent-1); color: #fff;">5</kbd>
+                </div>
+                <div class="flex justify-between items-center p-2 rounded" style="background: var(--bg-secondary); border: var(--border-style);">
+                    <span>Switch to Newspaper</span>
+                    <kbd class="px-2 py-1 rounded font-bold shadow" style="background: var(--accent-1); color: #fff;">6</kbd>
+                </div>
+            </div>
+            <div class="flex justify-end">
+                <button onclick="closeKeyboardModal()" class="theme-button px-5 py-2 text-xs font-bold" style="background: var(--accent-1); color: #fff;">
+                    Got It
+                </button>
+            </div>
+        </div>
+    </div>
+
+
     <!-- TOAST NOTIFICATION -->
     <div id="toast" class="fixed bottom-6 right-6 z-50 px-4 py-3 rounded-lg theme-card text-xs font-bold shadow-2xl transition-all duration-300 transform translate-y-20 opacity-0 flex items-center gap-2">
         <i class="fa-solid fa-circle-check text-emerald-400 text-base"></i>
         <span id="toast-msg">Theme Changed!</span>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
