@@ -318,6 +318,29 @@
             updateCSSInspector();
         };
 
+        function openKeyboardModal() {
+            const backdrop = document.getElementById('keyboard-modal-backdrop');
+            const box = document.getElementById('keyboard-modal-box');
+            backdrop.classList.remove('opacity-0', 'pointer-events-none');
+            box.classList.remove('scale-95');
+            box.classList.add('scale-100');
+        }
+
+        function closeKeyboardModal() {
+            const backdrop = document.getElementById('keyboard-modal-backdrop');
+            const box = document.getElementById('keyboard-modal-box');
+            backdrop.classList.add('opacity-0', 'pointer-events-none');
+            box.classList.remove('scale-100');
+            box.classList.add('scale-95');
+        }
+
+        // Close modal on outside click
+        document.getElementById('keyboard-modal-backdrop').addEventListener('click', (e) => {
+            if (e.target.id === 'keyboard-modal-backdrop') {
+                closeKeyboardModal();
+            }
+        });
+
         document.addEventListener('keydown', (e) => {
         // Ignore keypresses if user is typing in an input field
         if (['INPUT', 'SELECT', 'TEXTAREA'].includes(document.activeElement.tagName)) return;
