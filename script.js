@@ -284,6 +284,16 @@
                     ctx.beginPath();
                     ctx.arc(this.x, this.y, this.size / 1.5, 0, Math.PI * 2);
                     ctx.fill();
+                } else if (currentTheme === 'rococo') {
+                    // Floating Baroque Gold Sparkles
+                    ctx.fillStyle = '#d4af37';
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size / 2, 0, Math.PI * 2);
+                    ctx.fill();
+                } else if (currentTheme === 'newspaper') {
+                    // Falling vintage print speckles
+                    ctx.fillStyle = '#444444';
+                    ctx.fillRect(this.x, this.y, 2, 2);
                 }
                 ctx.restore();
             }
