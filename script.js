@@ -136,8 +136,10 @@
 
         // Switch active theme
         function setTheme(themeName) {
+
             currentTheme = themeName;
             document.documentElement.setAttribute('data-theme', themeName);
+            localStorage.setItem('preferred-theme', themeName); // Save preference
 
             // Update text content based on selected style
             const meta = themeDetails[themeName];
@@ -326,6 +328,12 @@
             initParticles();
             animateCanvas();
             updateCSSInspector();
+            
+            const savedTheme = localStorage.getItem('preferred-theme');
+
+            if (savedTheme && themeDetails[savedTheme]) {
+                setTheme(savedTheme);
+            }
         };
 
         function openKeyboardModal() {
