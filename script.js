@@ -376,3 +376,9 @@
             setTheme(themeMap[e.key]);
         }
     });
+
+    function randomTheme() {
+    const themes = ['frutiger-aero', 'bungee-y2k', 'rococo', 'neobrutalism', 'cyberpunk', 'newspaper'];
+    const random = themes[Math.floor(Math.random() * themes.length)];
+    setTheme(random);
+}
